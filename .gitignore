@@ -28,3 +28,6 @@ hs_err_pid*
 # Ignore Gradle build output directory
 build
 .idea/
+file-navigator-parent.iml
+file-navigator-client/file-navigator-client.iml
+file-navigator-server/file-navigator-server.iml

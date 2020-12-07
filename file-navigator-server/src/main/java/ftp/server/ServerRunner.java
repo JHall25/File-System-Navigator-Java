@@ -1,10 +1,10 @@
-package file-navigator;
+package ftp.server;
 
 /**
  * Hello world!
  *
  */
-public class App 
+public class ServerRunner
 {
     public static void main( String[] args )
     {
