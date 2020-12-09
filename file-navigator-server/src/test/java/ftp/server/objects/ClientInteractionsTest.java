@@ -8,7 +8,7 @@ import static org.junit.Assert.assertEquals;
 public class ClientInteractionsTest {
 	
 	@Before
-	public void setup() { 
+	public void setup() {
 		new ClientInteractions();
 	}
 	

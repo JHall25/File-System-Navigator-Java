@@ -1,4 +1,4 @@
-package ftp.server;
+package ftp.server.threads;
 
 import java.io.IOException;
 import java.io.PrintWriter;
