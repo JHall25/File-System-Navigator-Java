@@ -1,21 +1,19 @@
 version: '3'
 services:
-  mongodb:
-    container_name: 'mongodb'
-    image: 'mongodb'
+  clientcontainer:
+    container_name: 'clientcontainer'
+    image: 'clientcontainer'
     build:
       context: .
-      dockerfile: ./mongo.dockerfile
-    ports:
-    - "27017:27017"
-
-  monolith:
-    container_name: 'monolith'
-    image: 'monolith'
-    build:
-      context: .
-      dockerfile: ./monolith.dockerfile
-    ports:
-    - "8000:8080"
+      dockerfile: ./image/clientcontainer.dockerfile
     links:
-    - mongodb
+    - servercontainer
+
+  servercontainer:
+    container_name: 'servercontainer'
+    image: 'servercontainer'
+    build:
+      context: .
+      dockerfile: ./image/servercontainer.dockerfile
+    ports:
+    - "1234:1234"

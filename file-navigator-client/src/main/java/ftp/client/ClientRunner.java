@@ -22,8 +22,8 @@ public class ClientRunner {
     PrintWriter output = null;
     
     try {
-      //InetAddress host = InetAddress.getLocalHost();
-      Socket socket = new Socket("servercontainer", PORT);
+      InetAddress host = InetAddress.getLocalHost();
+      Socket socket = new Socket(host, PORT);
       networkInput = new Scanner(socket.getInputStream());
       userInput = new Scanner(System.in);
       output = new PrintWriter(socket.getOutputStream(), true);
