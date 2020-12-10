@@ -29,10 +29,7 @@ public class ClientHandler extends Thread {
     do {
       if (input.hasNextLine()) {
       	String textInput = input.nextLine();
-      	System.out.println(textInput);
         String[] operation = textInput.split(" ");
-        
-        System.out.println(operation[0]);
         switch (operation[0]) {
           case "ls":
             try {
@@ -49,7 +46,6 @@ public class ClientHandler extends Thread {
             break;
           case "cd":
             try {
-            	System.out.println(operation[1]);
               String tempPath = systemOperations.performCdOperation(operation[1]);
               output.println(tempPath);
               ClientInteractions.incrementNumberOfOperations();

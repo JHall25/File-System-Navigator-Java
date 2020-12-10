@@ -24,8 +24,7 @@ public class FileSystemOperations {
             .collect(Collectors.toCollection(ArrayList::new));
 
     for (String temp : directories) {
-      System.out.println(temp);
-      if (temp.equals(folderPath)) {
+      if (temp.equals(currentPath + "/" + folderPath)) {
         currentPath = currentPath + "/" + folderPath;
         return currentPath;
       }
