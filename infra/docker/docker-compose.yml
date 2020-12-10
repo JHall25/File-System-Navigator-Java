@@ -1,0 +1,19 @@
+version: '3'
+services:
+  clientcontainer:
+    container_name: 'clientcontainer'
+    image: 'clientcontainer'
+    build:
+      context: .
+      dockerfile: ./image/clientcontainer.dockerfile
+    links:
+    - servercontainer
+
+  servercontainer:
+    container_name: 'servercontainer'
+    image: 'servercontainer'
+    build:
+      context: .
+      dockerfile: ./image/servercontainer.dockerfile
+    ports:
+    - "1234:1234"
